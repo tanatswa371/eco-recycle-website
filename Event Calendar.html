@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecocycle Event Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .day {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+            min-height: 100px;
+        }
+        .event {
+            background: #4CAF50;
+            color: white;
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 3px;
+        }
+        .admin-tools {
+            margin-top: 20px;
+        }
+        .rsvp {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .rsvp button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .rsvp button:hover {
+            background: #45a049;
+        }
+        @media (max-width: 600px) {
+            .calendar {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ecocycle Event Calendar</h1>
+
+<div class="calendar">
+    <div class="day">
+        <strong>Mon</strong>
+        <div class="event">Workshop: Recycling 101</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Recycling 101')">RSVP</button>
+        </div>
+    </div>
+    <div class="day">
+        <strong>Tue</strong>
+        <div class="event">Community Clean-up</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Community Clean-up')">RSVP</button>
+        </div>
+    </div>
+    <div class="day">
+        <strong>Wed</strong>
+        <div class="event">Composting Workshop</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Composting Workshop')">RSVP</button>
+        </div>
+    </div>
+    <div class="day">
+        <strong>Thu</strong>
+        <div class="event">Plastic Waste Awareness</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Plastic Waste Awareness')">RSVP</button>
+        </div>
+    </div>
+    <div class="day">
+        <strong>Fri</strong>
+        <div class="event">Urban Gardening</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Urban Gardening')">RSVP</button>
+        </div>
+    </div>
+    <div class="day">
+        <strong>Sat</strong>
+        <div class="event">Eco-Friendly Products Fair</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Eco-Friendly Products Fair')">RSVP</button>
+        </div>
+    </div>
+    <div class="day">
+        <strong>Sun</strong>
+        <div class="event">Green Living Seminar</div>
+        <div class="rsvp">
+            <button onclick="rsvp('Green Living Seminar')">RSVP</button>
+        </div>
+    </div>
+</div>
+
+<div class="admin-tools">
+    <h2>Admin Tools</h2>
+    <button onclick="createEvent()">Create Event</button>
+    <button onclick="editEvent()">Edit Event</button>
+</div>
+
+<script>
+    function rsvp(eventName) {
+        alert('You have RSVP\'d for ' + eventName);
+    }
+
+    function createEvent() {
+        alert('Event creation form would appear here.');
+    }
+
+    function editEvent() {
+        alert('Event editing form would appear here.');
+    }
+</script>
+
+</body>
+</html>
